@@ -1,0 +1,12 @@
+esphome:
+  name: aztouch-station
+  platform: ESP32
+  board: esp32dev
+
+external_components:
+  - source: github://pr#az-touch-mod-display-support
+
+<<: !include includes/wifi.yaml
+<<: !include includes/display.yaml
+<<: !include includes/sensors/feuchte_analog.yaml
+<<: !include includes/sensors/ds18b20.yaml

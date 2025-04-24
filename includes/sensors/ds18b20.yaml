@@ -1,0 +1,8 @@
+dallas:
+  - pin: GPIO4
+
+sensor:
+  - platform: dallas
+    address: 0x1234567890ABCDEF
+    name: "Temperatur Sensor DS18B20"
+    id: temp_1

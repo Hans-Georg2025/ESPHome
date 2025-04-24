@@ -1,0 +1,17 @@
+display:
+  - platform: ili9341
+    model: TFT 2.8
+    cs_pin: GPIO5
+    dc_pin: GPIO16
+    reset_pin: GPIO17
+    rotation: 90
+    id: tft_display
+    update_interval: 1s
+    lambda: |-
+      it.print(10, 10, id(my_font), "Feuchtigkeit:");
+      it.printf(10, 30, id(my_font), "%.1f %%", id(feuchte_1).state);
+
+font:
+  - file: "arial.ttf"
+    id: my_font
+    size: 18
